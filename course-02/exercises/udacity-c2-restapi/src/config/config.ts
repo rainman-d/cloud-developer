@@ -1,10 +1,10 @@
 export const config = {
   "dev": {
-    "username": "",
-    "password": "",
-    "database": "",
-    "host": "",
-    "dialect": "postgres",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASS,
+    "database": process.env.DB_DATABASE,
+    "host": process.env.DB_HOST,
+    "dialect": process.env.DB_DIALECT,
     "aws_region": "us-east-2",
     "aws_profile": "default",
     "aws_media_bucket": "udagram-ruttner-dev"
@@ -15,5 +15,8 @@ export const config = {
     "database": "udagram_prod",
     "host": "",
     "dialect": "postgres"
+  },
+  "jwt": {
+    "secret": process.env.JWT_SECRET
   }
 }
